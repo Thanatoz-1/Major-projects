@@ -102,7 +102,7 @@ def upload_file():
         print("--- %s seconds ---" % str (time.time() - start_time))
         label = 'https://hotemoji.com/images/dl/9/grin-emoji-by-twitter.png' if result>0.5 else 'https://hotemoji.com/images/dl/x/sad-emoji-by-twitter.png'
         res='Happy' if result>0.5 else "Sad"
-        return render_template('template.html', label=res, imagesource=label)
+        return render_template('template.html', label=res, imagesource=label, sentence=file)
 
 from flask import send_from_directory
 
